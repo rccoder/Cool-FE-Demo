@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>demo1</title>
+</head>
+<style>
+    .demo, .bg, .mask, .border{
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+    }
+
+    .demo {
+        position: relative;
+        display: block;
+    }
+    .bg {
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+    
+    .border {
+        border: 10px solid black;
+        border-left-color: white;
+        border-top-color: white;
+    }
+    .mask, .border {
+        position: absolute;
+        left: 0;
+        top: 0;
+        -webkit-transition: all .5s ease;
+           -moz-transition: all .5s ease;
+            -ms-transition: all .5s ease;
+             -o-transition: all .5s ease;
+                transition: all .5s ease;
+    }
+
+    .info {
+        text-align: center;
+        margin-top: 50%;
+        -webkit-transform: translateY(-50%);
+           -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+             -o-transform: translateY(-50%);
+                transform: translateY(-50%);
+
+    }
+
+    .demo:hover .mask {
+        background-color: rgba(0, 0, 0, .5);
+        color:rgba(255, 255, 255, 1);
+    }
+    .demo:hover .border {
+        -webkit-transform: rotate(-180deg);
+           -moz-transform: rotate(-180deg);
+            -ms-transform: rotate(-180deg);
+             -o-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+    }
+</style>
+
+<body>
+    <a href="" class="demo">
+        <div class="bg" style="background-image:url(http://b.hiphotos.baidu.com/image/h%3D200/sign=025e31065dafa40f23c6c9dd9b65038c/10dfa9ec8a136327137e4407968fa0ec08fac777.jpg)"></div>
+        <div class="mask">
+            <div class="info">
+                <h3>标题</h3>
+                <p>你好</p>
+            </div>
+        </div>
+        <div class="border"></div>
+    </a>
+</body>
+
+</html>
